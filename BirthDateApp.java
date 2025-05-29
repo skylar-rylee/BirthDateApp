@@ -40,24 +40,16 @@ public class BirthDateApp
      }
 
      public static String getDayName (int day) {
-          switch (day) {
-               case 0:
-                    return "Sunday";
-               case 1:
-                    return "Monday";
-               case 2:
-                    return "Tuesday";
-               case 3:
-                    return "Wednesday";
-               case 4:
-                    return "Thursday";
-               case 5:
-                    return "Friday";
-               case 6:
-                    return "Saturday";
-               default:  
-                    return "Invalid";
-          }
+         return switch (day) {
+             case 0 -> "Sunday";
+             case 1 -> "Monday";
+             case 2 -> "Tuesday";
+             case 3 -> "Wednesday";
+             case 4 -> "Thursday";
+             case 5 -> "Friday";
+             case 6 -> "Saturday";
+             default -> "Invalid";
+         };
      }  
      
      public static String getMonthName (int month) {
